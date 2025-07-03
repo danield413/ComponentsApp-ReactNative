@@ -24,6 +24,7 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const backgroundColor = useThemeColor({}, 'background');
+  const headerBackgroundColor = useThemeColor({}, 'background');
 
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
@@ -53,7 +54,7 @@ export default function RootLayout() {
             headerShadowVisible: false,
             headerShown: true,
             headerStyle: {
-              backgroundColor: useThemeColor({}, 'background'),
+              backgroundColor: headerBackgroundColor,
             },
            
           }}
