@@ -39,8 +39,6 @@ export default function RootLayout() {
     return null;
   }
 
-  console.log("backgroundColor", backgroundColor);
-
   return (
     <GestureHandlerRootView
       style={{
