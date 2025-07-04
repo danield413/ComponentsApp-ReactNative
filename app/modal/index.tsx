@@ -1,10 +1,9 @@
-import { View, Text } from 'react-native';
+import ThemedView from '@/presentation/shared/ThemedView';
 
 const ModalScreen = () => {
   return (
-    <View>
-      <Text>ModalScreen</Text>
-    </View>
+   <ThemedView className='px-5  flex-1' >
+    </ThemedView>
   );
 };
 export default ModalScreen;
