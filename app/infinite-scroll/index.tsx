@@ -1,10 +1,11 @@
-import { View, Text } from 'react-native';
+import ThemedView from '@/presentation/shared/ThemedView';
+import { Text } from 'react-native';
 
 const InfiniteScrollScreen = () => {
   return (
-    <View>
+    <ThemedView className='px-5 justify-center items-center flex-1' > 
       <Text>InfiniteScrollScreen</Text>
-    </View>
+    </ThemedView >
   );
 };
 export default InfiniteScrollScreen;
