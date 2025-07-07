@@ -1,8 +1,3 @@
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import React, { useEffect } from 'react';
@@ -14,6 +9,7 @@ import { useThemeColor } from '@/hooks/useThemeColor';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import { allRoutes } from '@/constants/Routes';
+import { ThemeChangerProvider } from '@/presentation/context/ThemeChangeContext';
 import { Stack } from 'expo-router';
 import "../global.css";
 
@@ -47,8 +43,7 @@ export default function RootLayout() {
         backgroundColor: backgroundColor,
       }}
     >
-      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-       
+       <ThemeChangerProvider>
         <Stack
           screenOptions={{
             headerShadowVisible: false,
@@ -74,7 +69,7 @@ export default function RootLayout() {
           }
 
         </Stack>
-      </ThemeProvider>
+        </ThemeChangerProvider>
     </GestureHandlerRootView>
   );
 }
