@@ -65,7 +65,10 @@ export default function RootLayout() {
               <Stack.Screen
                 key={route.name}
                 name={route.name}
-                options={{ title: route.title }}
+                options={{ 
+                  title: route.title,
+                  headerShown: (route.title !== 'Slides')
+                }}
               />
             ))
           }
